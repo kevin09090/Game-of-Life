@@ -1,9 +1,9 @@
 
 /**
- * 여기에 GameOfLife 클래스 설명을 작성하십시오.
+ * Game of Life Main class
  * 
- * @author (작성자 이름) 
- * @version (버전번호나 날짜)
+ * @author Kevin Mun
+ * @version 0.1
  */
 public class GameOfLife {
     

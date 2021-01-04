@@ -36,10 +36,31 @@ public class GameOfLife {
         }
     }
     
+    private void moveR() {
+        boolean[][] nBoard = new boolean[row][col];
+        
+        for (int c = 0; c < col; ++c) {
+            for (int r = 0; r < row; ++r) {
+                nBoard[r][(c + 1) % col] = board[r][c];
+            }
+        }
+        
+        this.board = nBoard;
+    }
+    
+    public void start(){
+        Scanner scanner = new Scanner(System.in);  
+        
+        while(!"quit".equals(scanner.nextLine())) {
+            printBoard();
+            moveR();
+        }
+    }
+    
     public static void main(String[] args) {
         GameOfLife gameOfLife = new GameOfLife();
         gameOfLife.initBoard(0.3); 
-        gameOfLife.printBoard(); 
+        gameOfLife.start();
     }
 }
 
